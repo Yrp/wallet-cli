@@ -2007,7 +2007,7 @@ public class Client {
     }
 
     long blockNum = Long.parseLong(parameters[0]);
-    Optional<TransactionInfoList> result = walletApiWrapper.getTransactionInfoByBlockNum(blockNum);
+    Optional<TransactionInfoList> result = WalletApiWrapper.getTransactionInfoByBlockNum(blockNum);
 
     if (result.isPresent()) {
       TransactionInfoList transactionInfoList = result.get();

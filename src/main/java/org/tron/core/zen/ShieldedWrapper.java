@@ -42,15 +42,15 @@ public class ShieldedWrapper {
 
   @Setter
   @Getter
-  Map<String, ShieldedAddressInfo> shieldedAddressInfoMap = new ConcurrentHashMap();
+  Map<String, ShieldedAddressInfo> shieldedAddressInfoMap = new ConcurrentHashMap<>();
   @Setter
   private boolean resetNote = false;
   @Getter
   @Setter
-  public Map<String, Long> ivkMapScanBlockNum = new ConcurrentHashMap();
+  public Map<String, Long> ivkMapScanBlockNum = new ConcurrentHashMap<>();
   @Getter
   @Setter
-  public Map<Long, ShieldedNoteInfo>  utxoMapNote = new ConcurrentHashMap();
+  public Map<Long, ShieldedNoteInfo>  utxoMapNote = new ConcurrentHashMap<>();
   @Getter
   @Setter
   public List<ShieldedNoteInfo> spendUtxoList = new ArrayList<>();
@@ -615,7 +615,7 @@ public class ShieldedWrapper {
       return null;
     }
 
-    List<ShieldedAddressInfo> shieldedAddressInfoList = new ArrayList(
+    List<ShieldedAddressInfo> shieldedAddressInfoList = new ArrayList<>(
         shieldedAddressInfoMap.values());
     for (int i = 0; i < shieldedAddressInfoList.size(); i++) {
       System.out.println("The " + (i + 1) + "th shielded address is "

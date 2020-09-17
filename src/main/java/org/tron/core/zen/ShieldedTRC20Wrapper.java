@@ -52,15 +52,15 @@ public class ShieldedTRC20Wrapper {
 
   @Setter
   @Getter
-  Map<String, ShieldedAddressInfo> shieldedAddressInfoMap = new ConcurrentHashMap();
+  Map<String, ShieldedAddressInfo> shieldedAddressInfoMap = new ConcurrentHashMap<>();
   @Setter
   private boolean resetNote = false;
   @Getter
   @Setter
-  public Map<String, Long> ivkMapScanBlockNum = new ConcurrentHashMap();
+  public Map<String, Long> ivkMapScanBlockNum = new ConcurrentHashMap<>();
   @Getter
   @Setter
-  public Map<Long, ShieldedTRC20NoteInfo> utxoMapNote = new ConcurrentHashMap();
+  public Map<Long, ShieldedTRC20NoteInfo> utxoMapNote = new ConcurrentHashMap<>();
   @Getter
   @Setter
   public List<ShieldedTRC20NoteInfo> spendUtxoList = new ArrayList<>();
@@ -755,7 +755,7 @@ public class ShieldedTRC20Wrapper {
       return null;
     }
 
-    List<ShieldedAddressInfo> shieldedAddressInfoList = new ArrayList(
+    List<ShieldedAddressInfo> shieldedAddressInfoList = new ArrayList<>(
         shieldedAddressInfoMap.values());
     for (int i = 0; i < shieldedAddressInfoList.size(); i++) {
       System.out.println("The " + (i + 1) + "th shieldedTRC20 address is "
