@@ -4,7 +4,6 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'com.google.protobuf'
 apply plugin: 'com.github.johnrengelman.shadow'
-apply plugin: 'application'
 apply plugin: "maven"
 apply plugin: "maven-publish"
 
@@ -57,10 +56,6 @@ buildscript {
         classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.3'
         classpath "gradle.plugin.com.liferay:gradle-plugins-node:4.3.0"
     }
-}
-
-task wrapper(type: Wrapper) {
-    gradleVersion = '3.3'
 }
 
 dependencies {
@@ -120,14 +115,3 @@ protobuf {
     }
 }
 
-run {
-    standardInput = System.in
-    mainClassName = 'org.tron.walletcli.Client'
-}
-
-
-shadowJar {
-    baseName = 'wallet-cli'
-    classifier = null
-    version = null
-}
